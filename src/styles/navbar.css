@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+* {
+    font-family: "Short Stack";
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+}
+
+.dotted-line {
+    width: 60%; /* Adjust width as needed */
+    height: 1px;
+    background-color: transparent; /* Make the base background transparent */
+    border-top: 1px dotted #85715B; /* Create a dotted line */
+    margin: 0 auto; /* Center horizontally */
+}
