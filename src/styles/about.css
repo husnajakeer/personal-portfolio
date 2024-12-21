@@ -5,6 +5,18 @@
     margin-top: 3%;
     margin-left: 10%;
     transition: opacity 0.3s ease, transform 0.3s ease;
+
+    /* Add animation */
+    animation: bounce 3s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) scale(0.8); /* Initial position */
+    }
+    50% {
+        transform: translateY(-10px) scale(0.8); /* Moves up */
+    }
 }
 
 .about-image:hover {

@@ -10,8 +10,10 @@ function Projects() {
             <div class="row">
                 <ProjectCard></ProjectCard>
                 <ProjectCard></ProjectCard>
+                <ProjectCard></ProjectCard>
             </div>
             <div class="row">
+                <ProjectCard></ProjectCard>
                 <ProjectCard></ProjectCard>
                 <ProjectCard></ProjectCard>
             </div>
