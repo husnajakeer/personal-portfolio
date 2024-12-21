@@ -12,7 +12,7 @@ function About() {
                     <div class="intro">Nice to meet you! I'm</div>
                     <div class="name">HUSNA</div>
                     <div class="name">JAKEER,</div>
-                    <div class="description">a Computer Science major at the Georgia Institute of Technology with interests in <b>Software Engineering</b> and <b>Product Management</b></div>
+                    <div class="description">a Computer Science major at the Georgia Institute of Technology with interests in <b>Software Engineering</b>, <b>Product Management</b>, and <b>Product Design</b>.</div>
                     <div class="loader-sentence">I am
                         <div class="words">
                             <span class="word">a builder</span>

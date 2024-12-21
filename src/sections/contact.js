@@ -7,7 +7,7 @@ function Contact() {
         <div class="title">CONTACT INFO</div>
         <div class="contact-description">
             <div class="contact-text">
-                Want to  have a coffee chat or discuss potential opportunities? contact me via linkedin or email!
+                Want to have a coffee chat or discuss potential opportunities? contact me via linkedin or email!
             </div>
         </div>
         <div class="contact-card">
