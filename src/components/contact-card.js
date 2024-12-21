@@ -7,15 +7,21 @@ function ContactCard() {
   return (
     <>  
         <div class="card">
-            <div class="linkedin">
-                <img src={linkedinIcon} class="icon"></img>
-            </div>
-            <div class="github">
-                <img src={githubIcon} class="icon"></img>
-            </div>
-            <div class="email">
-                <img src={emailIcon} class="icon"></img>
-            </div>
+            <a href="https://www.linkedin.com/in/husna-jakeer-hussain" target ="_blank">
+                <div class="linkedin">
+                    <img src={linkedinIcon} class="icon"></img>
+                </div>
+            </a>
+            <a href="https://github.com/husnajakeer" target="_blank">
+                <div class="github">
+                    <img src={githubIcon} class="icon"></img>
+                </div>
+            </a>
+            <a href="mailto:husnajakeer@gmail.com">
+                <div class="email">
+                    <img src={emailIcon} class="icon"></img>
+                </div>
+            </a>
         </div>
     </>
   );
