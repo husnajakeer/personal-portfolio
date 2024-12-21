@@ -52,10 +52,10 @@ function Skills() {
                     <div class="skill-name" style={{marginLeft:"45%"}}>java</div>
                 </div>
                 <div class="icon">
-                    <div class="mint-green-icon" style={{marginLeft:"65%"}}>
+                    <div class="mint-green-icon" style={{marginLeft:"70%"}}>
                             <img src={pythonIcon} class="icon"></img>
                     </div>
-                    <div class="skill-name" style={{marginLeft:"35%"}}>python</div>
+                    <div class="skill-name" style={{marginLeft:"35%", marginTop:"5%"}}>python</div>
                 </div>
                 <div class="icon">
                     <div class="mint-green-icon" style={{marginLeft:"40%"}}>
@@ -130,10 +130,10 @@ function Skills() {
                     <div class="skill-name">node.js</div>
                 </div>
                 <div class="icon">
-                    <div class="brown-icon" style={{marginLeft:"20%", marginTop:"-5%"}}>
+                    <div class="brown-icon" style={{marginLeft:"20%"}}>
                             <img src={d3Icon} class="icon"></img>
                     </div>
-                    <div class="skill-name">d3.js</div>
+                    <div class="skill-name"style={{marginLeft:"25%", marginTop:"5%"}}>d3.js</div>
                 </div>
                 <div class="icon">
                     <div class="brown-icon">
