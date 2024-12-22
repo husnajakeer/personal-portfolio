@@ -10,15 +10,27 @@ import Contact from "./sections/contact.js";
 function App() {
   return (
     <>
-    <body>
-      <Navbar></Navbar>
-      <About></About>
-      <Interests></Interests>
-      <Timeline></Timeline>
-      <Skills></Skills>
-      <Projects></Projects>
-      <Contact></Contact>
-    </body>
+      <body>
+        <Navbar></Navbar>
+        <div id="about">
+          <About></About>
+        </div>
+        <div id="interests">
+          <Interests></Interests>
+        </div>
+        <div id="timeline">
+          <Timeline></Timeline>
+        </div>
+        <div id="skills">
+          <Skills></Skills>
+        </div>
+        <div id="projects">
+          <Projects></Projects>
+        </div>
+        <div id="contact">
+          <Contact></Contact>
+        </div>
+      </body>
     </>
   );
 }

@@ -5,6 +5,18 @@
     font-family: "Short Stack";
 }
 
+/* In navbar.css or App.css */
+nav {
+    position: sticky;
+    top: 0; /* Sticks to the top */
+    z-index: 1000; /* Keeps the navbar on top of other content */
+    background-color: #FAF6E8; /* Optional: Set the background color */
+    width: 100%; /* Make the navbar stretch the full width */
+    padding: 0.5%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+
 ul {
     display: flex;
     list-style: none;
@@ -12,6 +24,29 @@ ul {
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 2%;
+}
+
+li {
+    color: var(--nature-green, #395434);
+    text-align: center;
+    font-family: "Short Stack";
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 1.25px;
+    padding: 1%;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+li:hover {
+    color: #FAF6E8;
+    background-color: #395434;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
 }
 
 .dotted-line {
