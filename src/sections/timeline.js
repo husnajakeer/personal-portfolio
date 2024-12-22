@@ -40,6 +40,14 @@ function Timeline() {
           <path d="M5.97791 184.997L4.98345 5.00006" stroke="#85715B" stroke-width="9" stroke-linecap="round"/>
         </svg>
         <Event
+          time = "JANUARY - DECEMBER 2024"
+          title = "Web Developer at Empathy Bytes VIP"
+          description = "Accomplish implementation of resdesigns for the About and Project pages, and add responsiveness to website. Implemented a contact form for the VIP in React.js integrated with GraphQL."        
+        ></Event>
+        <svg class="connector" xmlns="http://www.w3.org/2000/svg" width="11" height="90" viewBox="0 0 11 190" fill="none">
+          <path d="M5.97791 184.997L4.98345 5.00006" stroke="#85715B" stroke-width="9" stroke-linecap="round"/>
+        </svg>
+        <Event
           time = "AUGUST - DECEMBER 2023"        
           title = "Project Developer at Georgia Tech iOS Club"
           description = "built the social connection page for an iOS mobile app that allowed users to post daily meals and share locations for restaurant/food recommendations"        

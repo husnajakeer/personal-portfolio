@@ -43,6 +43,7 @@
 }
 
 .intro {
+    margin-top: 10%;
     color: var(--brown, #85715B);
     font-size: 1.5em;
 }
