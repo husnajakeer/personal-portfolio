@@ -22,7 +22,7 @@ function About() {
                             <span class="word">a communicator</span>
                         </div>
                     </div>
-                    <div>Learn more about my projects below!</div>
+                    <div>Learn more about my projects and skills below!</div>
                     <ContactCard></ContactCard>
                 </div>
             </div>

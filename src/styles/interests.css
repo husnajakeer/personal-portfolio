@@ -1,6 +1,17 @@
 .interest-pic {
     transform: scale(0.7);
+    animation: pulse 2s infinite ease-in-out; /* Animation applied */
 }
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(0.7); /* Initial size */
+    }
+    50% {
+        transform: scale(0.75); /* Moves forward */
+    }
+}
+
 
 .interest-container {
     display: flex;
@@ -16,7 +27,7 @@
 
 .interest-right {
     width: 50%;
-    margin-top: 6%;
+    margin-top: 3%;
 }
 
 .interest-title {
@@ -36,7 +47,7 @@
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 53px; /* 212% */
+    line-height: 45px; /* 212% */
     letter-spacing: 1.25px;
     text-align: left    ;
 }

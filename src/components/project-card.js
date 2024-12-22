@@ -1,19 +1,23 @@
 import '../styles/project-card.css';
 import githubIcon from '../images/github-icon.png';
 
-function ProjectCard() {
+function ProjectCard(props) {
   return (
     <>
         <div class="info-card">
-            <div class="image"></div>
-            <div class="row">
+            <img class="image" src={props.src}></img>
+            <div class="project-row">
                 <div class="info">
-                    <div class="project-name">TITLE</div>
-                    <div class="project-description">description</div>
+                    <div class="project-name">{props.title}</div>
+                    <div class="project-description">{props.description}</div>
                 </div>
-                <div class="github-link">
-                    <img src={githubIcon}></img>
-                </div>
+                <a href = {props.link} target = "_blank">
+                    <div class="github-link">
+                        <img class = "github-icon" src={githubIcon}>
+                        </img>
+                    </div>
+                </a>
+
             </div>
         </div>
     </>

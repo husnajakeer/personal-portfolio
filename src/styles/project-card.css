@@ -1,6 +1,8 @@
 .info-card {
     display: inline-flex;
-    padding: 19px 30px 26px 33px;
+    width: 25%;
+    padding-top: 1%;
+    padding-right: 1%;
     flex-direction: column;
     align-items: flex-end;
     gap: 23px;
@@ -18,14 +20,14 @@
 
 .image {
     display: flex;
-    width: 80px;
-    height: 10px;
-    padding: 108px 120px 117px 119px;
+    width: 95%;
+    height: 205px;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
-    border-radius: 50px;
+    border-radius: 30px;
     background: var(--mint-green, #97A182);
+    object-fit: fill;
+    border: 1px solid #97A182;
 }
 
 .row {
@@ -35,7 +37,7 @@
 }
 
 .info {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content:flex-start;
     align-self: flex-start;
@@ -44,13 +46,13 @@
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
-    line-height: 27px; /* 245.455% */
     letter-spacing: 1.65px;
+    padding-left: 8%;
+    padding-right: 13%;
 }
 
 .project-name {
     display: flex;
-    height: 31px;
     flex-direction: column;
     justify-content: flex-start;
     align-self: flex-start;
@@ -59,8 +61,8 @@
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 27px; /* 180% */
     letter-spacing: 2.25px;
+    margin-bottom: 1.5%;
 }
 
 .project-description {
@@ -73,22 +75,26 @@
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
-    line-height: 27px; /* 245.455% */
     letter-spacing: 1.65px;
 }
 
 .github-link {
     display: flex;
-    width: 60px;
-    height: 60px;
-    padding: 7px 6px;
+    width: 15%;
+    height: 20%;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 80px;
     background: var(--forest-green, #395434);
     transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-left: 83%;
+    margin-bottom: 5%;
 }
 
 .github-link:hover {
     transform: scale(1.05); /* Adds a slight scaling effect */
+}
+
+.github-icon {
+    transform: scale(0.6);
 }
