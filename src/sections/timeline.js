@@ -6,7 +6,7 @@ function Timeline() {
     <>
         <div class="timeline-title">TIMELINE</div>
         <Event
-          time = "JANUARY 2024 - PRESENT"
+          time = "JANUARY 2024 - PRESENT.."
           title = "Creative Director of Brand at Bits of Good"
           description = "manage social media and lead a team of brand designers to create and distribute merchandise, conduct user research, and lead brand redesign"
         >
