@@ -1,4 +1,15 @@
-.DS_Store
-node_modules
-node_modules/.cache/
+# Ignore node_modules
+/node_modules/
 
+# Ignore build outputs
+/build/
+dist/
+
+# Ignore ESLint cache
+/.eslintcache
+
+# Ignore environment files
+.env
+
+# DSStore
+.DSStore
