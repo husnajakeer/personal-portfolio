@@ -98,3 +98,57 @@
 .github-icon {
     transform: scale(0.6);
 }
+
+@media (max-width: 1200px) {
+    .info-card {
+        display: inline-flex;
+        width: 27%;
+        padding-top: 1%;
+        padding-right: 1%;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+        border-radius: 50px;
+        border: 1px solid var(--brown, #85715B);
+        background: var(--beige, #FAF6E8);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        margin: 1%;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .row {
+        display: flex;
+        align-items: flex-end;
+        gap: 18px;
+        align-items: center;
+    }
+
+    .image {
+        display: flex;
+        width: 95%;
+        height: 150px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        background: var(--mint-green, #97A182);
+        object-fit: fill;
+        border: 1px solid #97A182;
+    }
+
+    .github-link {
+        display: flex;
+        width: 18%;
+        height: 18%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        background: var(--forest-green, #395434);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        margin-left: 79%;
+        margin-bottom: 5%;
+    }
+    
+    .github-link:hover {
+        transform: scale(1.05); /* Adds a slight scaling effect */
+    }
+}

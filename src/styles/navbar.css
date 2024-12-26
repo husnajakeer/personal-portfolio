@@ -5,6 +5,10 @@
     font-family: "Short Stack";
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* In navbar.css or App.css */
 nav {
     position: sticky;

@@ -8,7 +8,7 @@ function About() {
     <div class = "section">
         <div class = "about-container">
                 <img src={aboutBlob} class="about-image" alt="about-image"></img>
-                <div>
+                <div class="section">
                     <div class="intro">Nice to meet you! I'm</div>
                     <div class="name">HUSNA</div>
                     <div class="name">JAKEER,</div>
@@ -22,7 +22,7 @@ function About() {
                             <span class="word">a communicator</span>
                         </div>
                     </div>
-                    <div>Learn more about my projects and skills below!</div>
+                    <div class="learn-more">Learn more about my projects and skills below!</div>
                     <ContactCard></ContactCard>
                 </div>
             </div>
