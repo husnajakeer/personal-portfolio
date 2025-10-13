@@ -1,154 +1,211 @@
 .info-card {
-    display: inline-flex;
-    width: 25%;
-    padding-top: 1%;
-    padding-right: 1%;
+    display: flex;
+    width: 280px;
+    height: 420px;
+    padding: 0.75rem;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 23px;
-    border-radius: 50px;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 40px;
     border: 1px solid var(--brown, #85715B);
     background: var(--beige, #FAF6E8);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin: 2%;
+    margin: 0.5rem;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .info-card:hover {
-    transform: scale(1.05); /* Adds a slight scaling effect */
+    transform: scale(1.05);
 }
 
 .image {
-    display: flex;
-    width: 95%;
-    height: 205px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
+    width: 100%;
+    height: 180px;
+    border-radius: 40px 40px 0 0;
     background: var(--mint-green, #97A182);
-    object-fit: fill;
+    object-fit: cover;
+    object-position: center;
     border: 1px solid #97A182;
+    flex-shrink: 0;
+    display: block;
+    margin: 0;
+    transition: transform 0.3s ease;
 }
 
-.row {
+.image:hover {
+    transform: scale(1.02);
+}
+
+/* Image loading fallback */
+.image:not([src]),
+.image[src=""] {
+    background: linear-gradient(135deg, #97A182 0%, #7a8a6a 100%);
     display: flex;
-    align-items: flex-end;
-    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    color: #FAF6E8;
+    font-family: "Short Stack";
+    font-size: 12px;
+    text-align: center;
+}
+
+.image:not([src])::after,
+.image[src=""]::after {
+    content: "Image Loading...";
+}
+
+.project-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    flex: 1;
+    justify-content: space-between;
 }
 
 .info {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    justify-content:flex-start;
-    align-self: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     color: #000;
     font-family: "Short Stack";
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 1.65px;
-    padding-left: 8%;
-    padding-right: 13%;
+    text-align: center;
+    width: 100%;
+    flex: 1;
 }
 
 .project-name {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-self: flex-start;
+    justify-content: center;
+    align-items: center;
     color: var(--forest-green, #395434);
     font-family: "Short Stack";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 2.25px;
-    margin-bottom: 1.5%;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.4rem;
+    text-align: center;
 }
 
 .project-description {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-self: flex-start;
+    align-items: center;
     color: #000;
     font-family: "Short Stack";
-    font-size: 11px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
-    letter-spacing: 1.65px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    line-height: 1.3;
+    width: 100%;
 }
 
 .github-link {
     display: flex;
-    width: 15%;
-    height: 20%;
+    width: 45px;
+    height: 45px;
     justify-content: center;
     align-items: center;
-    border-radius: 80px;
+    border-radius: 12px;
     background: var(--forest-green, #395434);
     transition: opacity 0.3s ease, transform 0.3s ease;
-    margin-left: 83%;
-    margin-bottom: 5%;
+    flex-shrink: 0;
+    align-self: center;
 }
 
 .github-link:hover {
-    transform: scale(1.05); /* Adds a slight scaling effect */
+    transform: scale(1.05);
 }
 
 .github-icon {
     transform: scale(0.6);
 }
 
+/* Responsive Design for Horizontal Scrolling */
 @media (max-width: 1200px) {
     .info-card {
-        display: inline-flex;
-        width: 27%;
-        padding-top: 1%;
-        padding-right: 1%;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 20px;
-        border-radius: 50px;
-        border: 1px solid var(--brown, #85715B);
-        background: var(--beige, #FAF6E8);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        margin: 1%;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .row {
-        display: flex;
-        align-items: flex-end;
-        gap: 18px;
-        align-items: center;
-    }
-
-    .image {
-        display: flex;
-        width: 95%;
-        height: 150px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 40px;
-        background: var(--mint-green, #97A182);
-        object-fit: fill;
-        border: 1px solid #97A182;
-    }
-
-    .github-link {
-        display: flex;
-        width: 18%;
-        height: 18%;
-        justify-content: center;
-        align-items: center;
-        border-radius: 20px;
-        background: var(--forest-green, #395434);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        margin-left: 79%;
-        margin-bottom: 5%;
+        width: 260px;
+        height: 400px;
     }
     
-    .github-link:hover {
-        transform: scale(1.05); /* Adds a slight scaling effect */
+    .image {
+        height: 160px;
+        width: 100%;
+    }
+    
+    .project-name {
+        font-size: 13px;
+    }
+    
+    .project-description {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 870px) {
+    .info-card {
+        width: 240px;
+        height: 380px;
+        padding: 0.6rem;
+    }
+    
+    .image {
+        height: 150px;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .project-name {
+        font-size: 12px;
+    }
+    
+    .project-description {
+        font-size: 8px;
+    }
+    
+    .github-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-card {
+        width: 220px;
+        height: 360px;
+        padding: 0.5rem;
+        margin: 0.25rem;
+    }
+    
+    .image {
+        height: 140px;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .project-name {
+        font-size: 11px;
+    }
+    
+    .project-description {
+        font-size: 7px;
+    }
+    
+    .github-link {
+        width: 35px;
+        height: 35px;
+        border-radius: 8px;
     }
 }

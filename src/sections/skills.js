@@ -22,127 +22,55 @@ import d3Icon from "../images/skill-icons/d3-icon.png";
 import postgresqlIcon from "../images/skill-icons/postgresql-icon.png";
 
 function Skills() {
+  const skillsData = [
+    // Row 1 - Mint Green Icons
+    [
+      { name: 'react', icon: reactIcon, type: 'mint-green' },
+      { name: 'html', icon: htmlIcon, type: 'mint-green' },
+      { name: 'css', icon: cssIcon, type: 'mint-green' },
+      { name: 'java', icon: javaIcon, type: 'mint-green' },
+      { name: 'python', icon: pythonIcon, type: 'mint-green' },
+      { name: 'typescript', icon: typescriptIcon, type: 'mint-green' }
+    ],
+    // Row 2 - Dark Green Icons
+    [
+      { name: 'c', icon: cIcon, type: 'dark-green' },
+      { name: 'c++', icon: cplusplusIcon, type: 'dark-green' },
+      { name: 'svelte', icon: svelteIcon, type: 'dark-green' },
+      { name: 'mongodb', icon: mongodbIcon, type: 'dark-green' },
+      { name: 'swift', icon: swiftIcon, type: 'dark-green' },
+      { name: 'javascript', icon: javascriptIcon, type: 'dark-green' }
+    ],
+    // Row 3 - Brown Icons
+    [
+      { name: 'git', icon: gitIcon, type: 'brown' },
+      { name: 'docker', icon: dockerIcon, type: 'brown' },
+      { name: 'graphql', icon: graphqlIcon, type: 'brown' },
+      { name: 'node.js', icon: nodejsIcon, type: 'brown' },
+      { name: 'd3.js', icon: d3Icon, type: 'brown' },
+      { name: 'postgresql', icon: postgresqlIcon, type: 'brown' }
+    ]
+  ];
+
   return (
     <>
-        <div class="title">TECH STACK</div>
-        <div class="skill-section">
-            <div class="row">
-                <div class="icon">
-                    <div class="mint-green-icon" >
-                            <img src={reactIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name">react</div>
+      <div className="title">TECH STACK</div>
+      <div className="skill-section">
+        <div className="skills-container">
+          {skillsData.map((row, rowIndex) => (
+            <div key={rowIndex} className="skill-row">
+              {row.map((skill, skillIndex) => (
+                <div key={skillIndex} className="skill-item">
+                  <div className={`skill-icon ${skill.type}-icon`}>
+                    <img src={skill.icon} alt={skill.name} className="skill-icon-img" />
+                  </div>
+                  <div className="skill-name">{skill.name}</div>
                 </div>
-                <div class="icon">
-                    <div class="mint-green-icon">
-                            <img src={htmlIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name">html</div>
-                </div>
-                <div class="icon">
-                    <div class="mint-green-icon" style={{marginLeft:"20%"}}>
-                            <img src={cssIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name" style={{marginLeft:"20%"}}>css</div>
-                </div>
-                <div class="icon">
-                    <div class="mint-green-icon" style={{marginLeft:"50%"}}>
-                            <img src={javaIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name" style={{marginLeft:"45%"}}>java</div>
-                </div>
-                <div class="icon">
-                    <div class="mint-green-icon" style={{marginLeft:"70%"}}>
-                            <img src={pythonIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name" style={{marginLeft:"35%", marginTop:"5%"}}>python</div>
-                </div>
-                <div class="icon">
-                    <div class="mint-green-icon" style={{marginLeft:"40%"}}>
-                            <img src={typescriptIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name"style={{marginLeft:"20%"}}>typescript</div>
-                </div>
+              ))}
             </div>
-
-            <div class="row" style={{marginLeft:"2%"}}>
-                <div class="icon">
-                    <div class="dark-green-icon">
-                            <img src={cIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name">c</div>
-                </div>
-                <div class="icon">
-                    <div class="dark-green-icon">
-                            <img src={cplusplusIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name">c++</div>
-                </div>
-                <div class="icon">
-                    <div class="dark-green-icon" style={{marginLeft:"20%"}}>
-                            <img src={svelteIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name" style={{marginLeft:"10%", marginTop:"2%"}}>svelte</div>
-                </div>
-                <div class="icon">
-                    <div class="dark-green-icon">
-                            <img src={mongodbIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name">mongodb</div>
-                </div>
-                <div class="icon">
-                    <div class="dark-green-icon">
-                            <img src={swiftIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name" style={{marginLeft:"10%", marginTop:"5%"}}>swift</div>
-                </div>
-                <div class="icon">
-                    <div class="dark-green-icon">
-                            <img src={javascriptIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name">javascript</div>
-                </div>
-            </div>
-
-            <div class="row" style={{marginLeft:"2%"}}>
-                <div class="icon">
-                    <div class="brown-icon">
-                            <img src={gitIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name">git</div>
-                </div>
-                <div class="icon">
-                    <div class="brown-icon">
-                            <img src={dockerIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name">docker</div>
-                </div>
-                <div class="icon">
-                    <div class="brown-icon">
-                            <img src={graphqlIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name">graphql</div>
-                </div>
-                <div class="icon">
-                    <div class="brown-icon">
-                            <img src={nodejsIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name">node.js</div>
-                </div>
-                <div class="icon">
-                    <div class="brown-icon" style={{marginLeft:"20%"}}>
-                            <img src={d3Icon} class="icon"></img>
-                    </div>
-                    <div class="skill-name"style={{marginLeft:"25%", marginTop:"5%"}}>d3.js</div>
-                </div>
-                <div class="icon">
-                    <div class="brown-icon">
-                            <img src={postgresqlIcon} class="icon"></img>
-                    </div>
-                    <div class="skill-name">postgresql</div>
-                </div>
-            </div>
+          ))}
         </div>
+      </div>
     </>
   );
 }

@@ -11,7 +11,7 @@ function Interests() {
                 </div>
             </div>
             <div class="interest-right">
-                <img class="interest-pic" src={InterestIcons}></img>
+                <img class="interest-pic" src={InterestIcons} alt="Interest icons representing technology and innovation"></img>
             </div>
         </div>
     </>

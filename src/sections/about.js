@@ -8,7 +8,7 @@ function About() {
     <div class = "section">
         <div class = "about-container">
                 <img src={aboutBlob} class="about-image" alt="about-image"></img>
-                <div class="section">
+                <div class="about-content">
                     <div class="intro">Nice to meet you! I'm</div>
                     <div class="name">HUSNA</div>
                     <div class="name">JAKEER,</div>
@@ -27,13 +27,15 @@ function About() {
                 </div>
             </div>
     </div>
-    <a href="#interests" style={{marginTop:"-3%"}}>
-        <svg class="arrows">
-            <path class="a1" d="M0 0 L30 32 L60 0"></path>
-            <path class="a2" d="M0 20 L30 52 L60 20"></path>
-            <path class="a3" d="M0 40 L30 72 L60 40"></path>
-        </svg>
-    </a>
+    <div className="arrow-container">
+        <a href="#interests">
+            <svg className="arrows">
+                <path className="a1" d="M0 0 L30 32 L60 0"></path>
+                <path className="a2" d="M0 20 L30 52 L60 20"></path>
+                <path className="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
+        </a>
+    </div>
 
     </>
   );

@@ -1,5 +1,16 @@
-body {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +21,102 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Pink Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF6E8;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #E4AF9D 0%, #d19a8a 100%);
+  border-radius: 6px;
+  border: 2px solid #FAF6E8;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #d19a8a 0%, #c08a7a 100%);
+  border: 2px solid #f5f0e0;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(180deg, #c08a7a 0%, #b07a6a 100%);
+}
+
+::-webkit-scrollbar-corner {
+  background: #FAF6E8;
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #E4AF9D #FAF6E8;
+}
+
+/* Text Selection Styling */
+::selection {
+  background: rgba(228, 175, 157, 0.3);
+  color: #395434;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: rgba(228, 175, 157, 0.3);
+  color: #395434;
+  text-shadow: none;
+}
+
+/* Enhanced text selection for better contrast */
+::-webkit-selection {
+  background: rgba(228, 175, 157, 0.4);
+  color: #2d3f2a;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Focus outline styling */
+*:focus {
+  outline: 2px solid #E4AF9D;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal overflow globally */
+* {
+  max-width: 100%;
+}
+
+/* Ensure all containers respect viewport width */
+.container, .section, .content {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for specific elements */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(250, 246, 232, 0.5);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #E4AF9D 0%, #d19a8a 100%);
+  border-radius: 4px;
+  border: 1px solid rgba(250, 246, 232, 0.8);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #d19a8a 0%, #c08a7a 100%);
 }

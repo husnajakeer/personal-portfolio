@@ -2,32 +2,20 @@ import '../styles/event.css';
 
 function Event(props) {
   return (
-    <>
-<div class="event-section">
-    <div class="time">{props.time}</div>
-    
-    <div class="svg-container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="16" viewBox="0 0 238 16" fill="none">
-            <path d="M16 8C16 12.4183 12.4183 16 7.99999 16C3.58171 16 -7.89903e-06 12.4183 -7.89903e-06 8C-7.89903e-06 3.58172 3.58171 0 7.99999 0C12.4183 0 16 3.58172 16 8ZM238 9.5H7.99999V6.5H238V9.5Z" fill="black"/>
-        </svg>
+    <article className={`event-section ${props.category ? `category-${props.category}` : ''}`}>
+        <div className="time">{props.time}</div>
         
-        <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37" fill="none">
-            <circle class="dot" cx="18.5" cy="18.5" r="16" fill="#395434" stroke="#FAF6E8" stroke-width="5"/>
-        </svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="12" viewBox="10 0 187 16" fill="none">
-            <path d="M171 8C171 12.4183 174.582 16 179 16C183.418 16 187 12.4183 187 8C187 3.58172 183.418 0 179 0C174.582 0 171 3.58172 171 8ZM0 9.5H179V6.5H0L0 9.5Z" fill="black"/>
-        </svg>
-    </div>
+        <div className="timeline-line">
+            <div className="line-left"></div>
+            <div className="dot-inner"></div>
+            <div className="line-right"></div>
+        </div>
 
-    <div class="event">
-        <div class="event-name">{props.title}</div>
-        <div class="event-description">{props.description}</div>
-    </div>
-</div>
-
-
-    </>
+        <div className="event-content">
+            <h3 className="event-name">{props.title}</h3>
+            <p className="event-description">{props.description}</p>
+        </div>
+    </article>
   );
 }
 

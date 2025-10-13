@@ -1,14 +1,17 @@
 .interest-pic {
-    transform: scale(0.7);
-    animation: pulse 2s infinite ease-in-out; /* Animation applied */
+    transform: scale(0.6);
+    animation: pulse 2s infinite ease-in-out;
+    max-width: 50%;
+    height: auto;
+    object-fit: contain;
 }
 
 @keyframes pulse {
     0%, 100% {
-        transform: scale(0.7); /* Initial size */
+        transform: scale(0.65); /* Initial size */
     }
     50% {
-        transform: scale(0.75); /* Moves forward */
+        transform: scale(0.65); /* Moves forward */
     }
 }
 
@@ -16,17 +19,27 @@
 .interest-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .interest-left {
     width: 60%;
     margin-left: 10%;
-    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .interest-right {
     width: 50%;
-    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .interest-title {
@@ -74,21 +87,26 @@ b {
         }
     }
     
-    
     .interest-container {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        padding: 1.5rem;
     }
     
     .interest-left {
         margin-left: 10%;
-        margin-top: 6%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     
     .interest-right {
         width: 40%;
-        margin-top: -2%;
         margin-left: -5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .interest-title {
@@ -121,34 +139,111 @@ b {
 }
 
 @media (max-width: 870px) {
-    .interest-left {
-        margin-left: 8%;
-        margin-top: 6%;
+    .interest-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: 60vh;
+        padding: 1rem;
+        justify-content: center;
     }
-
-        .interest-pic {
+    
+    .interest-left {
+        width: 90%;
+        margin-left: 0;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .interest-right {
+        width: 80%;
+        margin-top: 2rem;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .interest-pic {
         transform: scale(0.4);
-        animation: pulse 2s infinite ease-in-out; /* Animation applied */
-        margin-left: -20%;
+        animation: pulse 2s infinite ease-in-out;
+        margin-left: 0;
     }
     
     @keyframes pulse {
         0%, 100% {
-            transform: scale(0.45); /* Initial size */
+            transform: scale(0.45);
         }
         50% {
-            transform: scale(0.5); /* Moves forward */
+            transform: scale(0.5);
         }
     }
 
+    .interest-title {
+        font-size: 28px;
+        line-height: 45px;
+        margin-bottom: 2%;
+    }
+
     .interest-description {
-        color: #000;
-        font-family: "Short Stack";
         font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 29px; /* 212% */
+        line-height: 29px;
         letter-spacing: 1.25px;
-        text-align: left;
+        text-align: center;
+    }
+    
+    b {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .interest-container {
+        padding: 1rem 0.5rem;
+    }
+    
+    .interest-left {
+        width: 95%;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .interest-right {
+        width: 90%;
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .interest-pic {
+        transform: scale(0.3);
+    }
+    
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(0.35);
+        }
+        50% {
+            transform: scale(0.4);
+        }
+    }
+
+    .interest-title {
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+    .interest-description {
+        font-size: 12px;
+        line-height: 25px;
+    }
+    
+    b {
+        font-size: 14px;
     }
 }
