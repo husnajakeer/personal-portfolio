@@ -12,17 +12,13 @@ export const useTheme = () => {
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    // Check localStorage first, then system preference
+    // Check localStorage first, then default to light mode
     const savedTheme = localStorage.getItem('portfolio-theme');
     if (savedTheme) {
       return savedTheme;
     }
     
-    // Check system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-    
+    // Default to light mode for new users
     return 'light';
   });
 
@@ -40,23 +36,23 @@ export const ThemeProvider = ({ children }) => {
     // Update meta theme-color for mobile browsers
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
     if (metaThemeColor) {
-      metaThemeColor.setAttribute('content', theme === 'dark' ? '#1a1a1a' : '#FAF6E8');
+      metaThemeColor.setAttribute('content', theme === 'dark' ? '#1a1a1a' : '#E4AF9D');
     }
   }, [theme]);
 
-  // Listen for system theme changes
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = (e) => {
-      // Only update if user hasn't manually set a preference
-      if (!localStorage.getItem('portfolio-theme')) {
-        setTheme(e.matches ? 'dark' : 'light');
-      }
-    };
+  // Listen for system theme changes (disabled - we default to light mode)
+  // useEffect(() => {
+  //   const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  //   const handleChange = (e) => {
+  //     // Only update if user hasn't manually set a preference
+  //     if (!localStorage.getItem('portfolio-theme')) {
+  //       setTheme(e.matches ? 'dark' : 'light');
+  //     }
+  //   };
 
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
+  //   mediaQuery.addEventListener('change', handleChange);
+  //   return () => mediaQuery.removeEventListener('change', handleChange);
+  // }, []);
 
   const value = {
     theme,

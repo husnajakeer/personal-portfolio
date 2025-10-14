@@ -38,7 +38,7 @@ function Projects() {
     },
     {
       title: "Personal Portfolio",
-      description: "A fully developed React.js web application that showcases my interests, tech stack, projects, contact info, and resume. Showcases animations, responsive design, and more. Implmented and deployed using GitHub Pages.",
+      description: "A fully developed React.js web application that showcases my interests, tech stack, projects, contact info, and resume. Showcases animations, responsive design, and more. Implemented and deployed using GitHub Pages.",
       src: Portfolio,
       link: "https://github.com/husnajakeer/personal-portfolio"
     },

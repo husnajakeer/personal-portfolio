@@ -68,11 +68,18 @@ function Timeline() {
       title: "Coding Instructor at Code Ninjas",
       description: "Guided 30+ children ages 5-14 in game development and event-driven programming through 7+ lesson plans, educational curriculum, and coding platforms including Scratch and Code.org",
       category: "work"
+    },
+    {
+      id: 10,
+      time: "AUGUST 2022 - MAY 2025",
+      title: "Bachelor of Science in Computer Science at Georgia Institute of Technology",
+      description: "I graduated from Georgia Tech with a Bachelor of Science in Computer Science, where I was a member of the Georgia Tech Hexlabs, Georgia Tech iOS Club, and Georgia Tech WebDev Club.",
+      category: "education"
     }
   ];
 
   const filteredEvents = activeFilter === 'all' 
-    ? timelineEvents 
+    ? timelineEvents.filter(event => event.category !== 'education')
     : timelineEvents.filter(event => event.category === activeFilter);
 
   const handleFilterChange = (filter) => {
@@ -109,6 +116,12 @@ function Timeline() {
                   onClick={() => handleFilterChange('leadership')}
                 >
                   Organizations/Leadership
+                </button>
+                <button 
+                  className={`filter-btn ${activeFilter === 'education' ? 'active' : ''}`}
+                  onClick={() => handleFilterChange('education')}
+                >
+                  Education
                 </button>
             </div>
 
