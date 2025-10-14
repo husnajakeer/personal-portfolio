@@ -54,42 +54,6 @@ const FlowerCursor = () => {
       }, 2000);
     };
 
-    const isInteractiveElement = (element) => {
-      // Check if element is a valid DOM element
-      if (!element || !element.tagName) {
-        return false;
-      }
-
-      const interactiveElements = ['A', 'BUTTON', 'INPUT', 'TEXTAREA', 'SELECT'];
-      if (interactiveElements.includes(element.tagName)) {
-        return true;
-      }
-      
-      // Check if element has interactive classes or attributes
-      if (element.classList && (
-        element.classList.contains('clickable') ||
-        (element.getAttribute && element.getAttribute('role') === 'button')
-      )) {
-        return true;
-      }
-      
-      // Use closest if available, otherwise check parent elements manually
-      if (element.closest) {
-        return element.closest('a, button, input, textarea, select, [role="button"], .clickable') !== null;
-      } else {
-        // Fallback for browsers without closest support
-        let current = element;
-        while (current && current !== document.body && current.tagName) {
-          if (interactiveElements.includes(current.tagName) ||
-              (current.classList && current.classList.contains('clickable')) ||
-              (current.getAttribute && current.getAttribute('role') === 'button')) {
-            return true;
-          }
-          current = current.parentElement;
-        }
-        return false;
-      }
-    };
 
     // Handle clicks with special effect
     const handleClick = (e) => {
