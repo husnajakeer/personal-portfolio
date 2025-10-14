@@ -1,0 +1,234 @@
+.info-card {
+    display: flex;
+    width: 280px;
+    height: 420px;
+    padding: 0.75rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 40px;
+    border: 1px solid #85715B;
+    background: #FAF6E8;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+[data-theme="dark"] .info-card {
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    box-shadow: 0px 4px 4px 0px var(--shadow-medium);
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+}
+
+.image {
+    width: 100%;
+    height: 180px;
+    border-radius: 40px 40px 0 0;
+    background: #97A182;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid #85715B;
+    flex-shrink: 0;
+    display: block;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .image {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+.image:hover {
+    transform: scale(1.02);
+}
+
+/* Image loading fallback */
+.image:not([src]),
+.image[src=""] {
+    background: linear-gradient(135deg, #97A182 0%, #7a8a6a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FAF6E8;
+}
+
+[data-theme="dark"] .image:not([src]),
+[data-theme="dark"] .image[src=""] {
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-muted);
+    font-family: "Short Stack";
+    font-size: 12px;
+    text-align: center;
+}
+
+.image:not([src])::after,
+.image[src=""]::after {
+    content: "Image Loading...";
+}
+
+.project-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--text-primary);
+    font-family: "Short Stack";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 1.65px;
+    text-align: center;
+    width: 100%;
+    flex: 1;
+    transition: color 0.3s ease;
+}
+
+.project-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+    font-family: "Short Stack";
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.4rem;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--text-secondary);
+    font-family: "Short Stack";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-align: center;
+    line-height: 1.3;
+    width: 100%;
+    transition: color 0.3s ease;
+}
+
+.github-link {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: #2d3f2a;
+    border: 1px solid #ffffff;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.github-link:hover {
+    transform: scale(1.05);
+    background: #1f2a1d;
+    border-color: #ffffff;
+}
+
+.github-icon {
+    transform: scale(0.6);
+}
+
+/* Responsive Design for Horizontal Scrolling */
+@media (max-width: 1200px) {
+    .info-card {
+        width: 260px;
+        height: 400px;
+    }
+    
+    .image {
+        height: 160px;
+        width: 100%;
+    }
+    
+    .project-name {
+        font-size: 13px;
+    }
+    
+    .project-description {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 870px) {
+    .info-card {
+        width: 240px;
+        height: 380px;
+        padding: 0.6rem;
+    }
+    
+    .image {
+        height: 150px;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .project-name {
+        font-size: 12px;
+    }
+    
+    .project-description {
+        font-size: 8px;
+    }
+    
+    .github-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-card {
+        width: 220px;
+        height: 360px;
+        padding: 0.5rem;
+        margin: 0.25rem;
+    }
+    
+    .image {
+        height: 140px;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .project-name {
+        font-size: 11px;
+    }
+    
+    .project-description {
+        font-size: 7px;
+    }
+    
+    .github-link {
+        width: 35px;
+        height: 35px;
+        border-radius: 8px;
+    }
+}

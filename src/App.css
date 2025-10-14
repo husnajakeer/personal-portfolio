@@ -1,0 +1,4 @@
+/* App-specific styles - theme colors are handled by CSS variables */
+html {
+  scroll-behavior: smooth;
+}

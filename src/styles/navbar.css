@@ -1,0 +1,219 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+* {
+    font-family: "Short Stack";
+}
+
+/* Global overflow prevention */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Navbar Styles */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bg-primary);
+    width: 100%;
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 6px var(--shadow-light);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1001;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-theme-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.nav-logo a {
+    color: var(--text-primary);
+    font-family: "Short Stack";
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+.nav-menu li {
+    color: var(--text-primary);
+    text-align: center;
+    font-family: "Short Stack";
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.nav-menu li:hover {
+    color: var(--bg-primary);
+    background-color: var(--accent-primary);
+}
+
+    .nav-menu a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .nav-menu a:focus {
+        outline: none;
+    }
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1002;
+    position: relative;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-primary);
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.dotted-line {
+    width: 60%;
+    height: 1px;
+    background-color: transparent;
+    border-top: 1px dotted var(--border-color);
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 870px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .nav-logo a {
+        font-size: 1rem;
+    }
+    
+    .nav-theme-toggle {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: var(--bg-primary);
+        width: 100%;
+        max-width: 100vw;
+        text-align: center;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
+        padding: 2rem 0;
+        z-index: 1000;
+        border-top: 1px solid rgba(57, 84, 52, 0.1);
+        box-sizing: border-box;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .nav-menu li {
+        margin: 0.5rem 2rem;
+        padding: 1rem;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-menu li:hover {
+        color: var(--bg-primary);
+        background-color: var(--accent-primary);
+        transform: translateY(-2px);
+    }
+    
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .dotted-line {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 0.5rem;
+    }
+    
+    .nav-logo a {
+        font-size: 0.9rem;
+    }
+    
+    .nav-menu li {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    .dotted-line {
+        width: 95%;
+    }
+}

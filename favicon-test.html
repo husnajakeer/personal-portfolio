@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Test</title>
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .instructions {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .logo-preview {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .logo-preview svg {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h1>Favicon Test Page</h1>
+        <p>This page is testing your new flower favicon. You should see the pink flower logo in the browser tab.</p>
+        
+        <div class="logo-preview">
+            <h3>Your Logo Preview:</h3>
+            <svg width="64" height="64" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Pink flower petals - five petals in circular arrangement -->
+                <circle cx="20" cy="13" r="4" fill="#E4AF9D" opacity="0.9"/>
+                <circle cx="15.5" cy="17.5" r="4" fill="#E4AF9D" opacity="0.9"/>
+                <circle cx="24.5" cy="17.5" r="4" fill="#E4AF9D" opacity="0.9"/>
+                <circle cx="17" cy="25" r="4" fill="#E4AF9D" opacity="0.9"/>
+                <circle cx="23" cy="25" r="4" fill="#E4AF9D" opacity="0.9"/>
+                
+                <!-- Flower center -->
+                <circle cx="20" cy="20" r="3" fill="#85715B"/>
+                
+                <!-- Simple stem -->
+                <path d="M20 28 L20 32" stroke="#97A182" stroke-width="3" stroke-linecap="round"/>
+                
+                <!-- Small leaf -->
+                <path d="M16 30 Q12 28 16 26 Q20 28 16 30" fill="#97A182" opacity="0.8"/>
+            </svg>
+        </div>
+        
+        <h3>If you still see the React icon:</h3>
+        <ol>
+            <li><strong>Hard refresh:</strong> Press Ctrl+F5 (Windows) or Cmd+Shift+R (Mac)</li>
+            <li><strong>Clear browser cache:</strong> Go to browser settings and clear cache/cookies</li>
+            <li><strong>Try incognito/private mode:</strong> Open the site in a private browsing window</li>
+            <li><strong>Wait a few minutes:</strong> Sometimes favicons take time to update</li>
+        </ol>
+        
+        <p><strong>Note:</strong> The SVG favicon should work in modern browsers. If you're still seeing the React icon, it might be cached. Try the steps above!</p>
+    </div>
+</body>
+</html>
