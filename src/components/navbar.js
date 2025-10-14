@@ -1,6 +1,7 @@
 import '../styles/navbar.css';
 import { useState, useEffect } from 'react';
 import Logo from './Logo.js';
+import ThemeToggle from './ThemeToggle.js';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,6 +46,10 @@ function Navbar() {
               <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
               <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
             </ul>
+          </div>
+          
+          <div className="nav-theme-toggle">
+            <ThemeToggle />
           </div>
           
           <div className={`nav-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>

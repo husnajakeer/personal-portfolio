@@ -1,7 +1,4 @@
-body {
-  background-color: #FAF6E8;
-}
-
+/* App-specific styles - theme colors are handled by CSS variables */
 html {
   scroll-behavior: smooth;
 }

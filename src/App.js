@@ -1,4 +1,5 @@
 import './App.css';
+import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from "./components/navbar.js";
 import PageLoader from "./components/page-loader.js";
 import About from "./sections/about.js";
@@ -10,7 +11,7 @@ import Contact from "./sections/contact.js";
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <PageLoader />
       <Navbar></Navbar>
       <div id="about">
@@ -31,7 +32,7 @@ function App() {
       <div id="contact">
         <Contact></Contact>
       </div>
-    </>
+    </ThemeProvider>
   );
 }
 

@@ -1,8 +1,8 @@
 .title {
-    color: var(--forest-green, #395434);
+    color: var(--text-primary);
     text-align: center;
     -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: var(--pastel-pink, #E4AF9D);
+    -webkit-text-stroke-color: var(--accent-primary);
     font-family: "Mochiy Pop P One";
     font-size: 48px;
     font-style: normal;
@@ -11,6 +11,12 @@
     letter-spacing: 7.2px;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .title {
+    color: #E4AF9D;
+    -webkit-text-stroke-color: #E4AF9D;
 }
 
 .contact-description {
@@ -23,7 +29,7 @@
 }
 
 .contact-text {
-    color: #000;
+    color: var(--text-secondary);
     text-align: center;
     font-family: "Short Stack";
     font-size: 18px;
@@ -33,6 +39,7 @@
     letter-spacing: 4.5px;
     margin-left: 15%;
     margin-right: 15%;
+    transition: color 0.3s ease;
 }
 
 .contact-card {

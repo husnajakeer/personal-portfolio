@@ -9,10 +9,10 @@
 }
 
 .timeline-title {
-    color: var(--forest-green, #395434);
+    color: var(--text-primary);
     text-align: center;
     -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: var(--pastel-pink, #E4AF9D);
+    -webkit-text-stroke-color: var(--accent-primary);
     font-family: "Mochiy Pop P One";
     font-size: 42px;
     font-style: normal;
@@ -21,7 +21,13 @@
     letter-spacing: 6px;
     margin-bottom: 2rem;
     animation: title-glow 4s ease-in-out infinite;
-    filter: drop-shadow(0 4px 8px rgba(57, 84, 52, 0.2));
+    filter: drop-shadow(0 4px 8px var(--shadow-light));
+    transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .timeline-title {
+    color: #E4AF9D;
+    -webkit-text-stroke-color: #E4AF9D;
 }
 
 @keyframes title-glow {
@@ -43,9 +49,9 @@
 
 .filter-btn {
     padding: 0.75rem 1.5rem;
-    border: 2px solid var(--forest-green, #395434);
-    background: var(--beige, #FAF6E8);
-    color: var(--forest-green, #395434);
+    border: 2px solid var(--border-color);
+    background: var(--bg-primary);
+    color: var(--text-primary);
     font-family: "Short Stack";
     font-size: 14px;
     font-weight: 600;
@@ -58,21 +64,22 @@
 }
 
 .filter-btn:hover {
-    background: var(--pastel-pink, #E4AF9D);
+    background: var(--accent-primary);
+    color: var(--bg-primary);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(57, 84, 52, 0.2);
+    box-shadow: 0 4px 12px var(--shadow-medium);
 }
 
 .filter-btn.active {
-    background: var(--forest-green, #395434);
-    color: var(--beige, #FAF6E8);
+    background: var(--accent-green);
+    color: var(--bg-primary);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(57, 84, 52, 0.3);
+    box-shadow: 0 4px 12px var(--shadow-medium);
 }
 
 .filter-btn.active:hover {
-    background: var(--forest-green, #395434);
-    color: var(--beige, #FAF6E8);
+    background: var(--accent-green-secondary);
+    color: var(--bg-primary);
 }
 
 .timeline-wrapper {

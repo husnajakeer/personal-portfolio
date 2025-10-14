@@ -1,9 +1,9 @@
 /* Title Styles */
 .title {
-    color: var(--forest-green, #395434);
+    color: var(--text-primary);
     text-align: center;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: var(--beige, #FAF6E8);
+    -webkit-text-stroke-color: var(--accent-primary);
     font-family: "Mochiy Pop P One";
     font-size: 36px;
     font-style: normal;
@@ -12,6 +12,12 @@
     letter-spacing: 5.4px;
     margin-top: 6%;
     margin-bottom: 3%;
+    transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .title {
+    color: #E4AF9D;
+    -webkit-text-stroke-color: #E4AF9D;
 }
 
 /* Main Container */
@@ -26,7 +32,7 @@
     margin: 80px auto;
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: var(--forest-green, #395434) transparent;
+    scrollbar-color: #395434 transparent;
     scroll-behavior: smooth;
 }
 
@@ -41,7 +47,7 @@
 }
 
 .skill-section::-webkit-scrollbar-thumb {
-    background: var(--forest-green, #395434);
+    background: #395434;
     border-radius: 4px;
     opacity: 0.6;
 }
@@ -81,15 +87,15 @@
 /* Skill Icons Base Styles */
 .skill-icon {
     border-radius: 45px 45px 90px 90px;
-    border: 1px solid var(--forest-green, #395434);
-    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--border-color);
+    box-shadow: 0px 3px 3px 0px var(--shadow-medium);
     width: 75px;
     height: 75px;
     margin-bottom: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .skill-icon:hover {
@@ -105,20 +111,20 @@
 
 /* Icon Type Colors */
 .mint-green-icon {
-    background: var(--mint-green, #97A182);
+    background: #97A182;
 }
 
 .dark-green-icon {
-    background: var(--forest-green, #395434);
+    background: #395434;
 }
 
 .brown-icon {
-    background: var(--brown, #85715B);
+    background: #85715B;
 }
 
 /* Skill Names */
 .skill-name {
-    color: var(--forest-green, #395434);
+    color: var(--text-primary);
     text-align: center;
     font-family: "Short Stack";
     font-size: 18px;
@@ -126,6 +132,7 @@
     font-weight: 400;
     letter-spacing: 2.8px;
     margin-top: 4px;
+    transition: color 0.3s ease;
 }
 
 /* Responsive Design */

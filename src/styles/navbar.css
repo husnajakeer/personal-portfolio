@@ -21,10 +21,11 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #FAF6E8;
+    background-color: var(--bg-primary);
     width: 100%;
     padding: 0.5rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--shadow-light);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-container {
@@ -46,13 +47,20 @@ nav {
   gap: 0.5rem;
 }
 
+.nav-theme-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
 .nav-logo a {
-    color: var(--nature-green, #395434);
+    color: var(--text-primary);
     font-family: "Short Stack";
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
     letter-spacing: 1px;
+    transition: color 0.3s ease;
 }
 
 .nav-menu ul {
@@ -64,20 +72,20 @@ nav {
 }
 
 .nav-menu li {
-    color: var(--nature-green, #395434);
+    color: var(--text-primary);
     text-align: center;
     font-family: "Short Stack";
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 1px;
     padding: 0.5rem 1rem;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     border-radius: 10px;
 }
 
 .nav-menu li:hover {
-    color: #FAF6E8;
-    background-color: #395434;
+    color: var(--bg-primary);
+    background-color: var(--accent-primary);
 }
 
     .nav-menu a {
@@ -101,9 +109,9 @@ nav {
 .bar {
     width: 25px;
     height: 3px;
-    background-color: var(--nature-green, #395434);
+    background-color: var(--text-primary);
     margin: 3px 0;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     border-radius: 2px;
 }
 
@@ -111,7 +119,7 @@ nav {
     width: 60%;
     height: 1px;
     background-color: transparent;
-    border-top: 1px dotted #85715B;
+    border-top: 1px dotted var(--border-color);
     margin: 0 auto;
 }
 
@@ -125,6 +133,11 @@ nav {
         font-size: 1rem;
     }
     
+    .nav-theme-toggle {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
     .nav-toggle {
         display: flex;
     }
@@ -134,7 +147,7 @@ nav {
         left: -100%;
         top: 60px;
         flex-direction: column;
-        background-color: #FAF6E8;
+        background-color: var(--bg-primary);
         width: 100%;
         max-width: 100vw;
         text-align: center;
@@ -164,8 +177,8 @@ nav {
     }
     
     .nav-menu li:hover {
-        color: #FAF6E8;
-        background-color: #395434;
+        color: var(--bg-primary);
+        background-color: var(--accent-primary);
         transform: translateY(-2px);
     }
     

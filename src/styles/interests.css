@@ -43,7 +43,7 @@
 }
 
 .interest-title {
-    color: var(--brown, #85715B);
+    color: var(--text-muted);
     font-family: "Mochiy Pop P One";
     font-size: 35px;
     font-style: normal;
@@ -51,23 +51,26 @@
     line-height: 65px; /* 162.5% */
     letter-spacing: 2px;
     margin-bottom: 1%;
+    transition: color 0.3s ease;
 }
 
 .interest-description {
-    color: #000;
+    color: var(--text-secondary);
     font-family: "Short Stack";
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 40px; /* 212% */
     letter-spacing: 1.25px;
-    text-align: left    ;
+    text-align: left;
+    transition: color 0.3s ease;
 }
 
 b {
-    color: #395434;
+    color: var(--text-primary);
     font-weight: bolder;
     font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 
@@ -110,7 +113,7 @@ b {
     }
     
     .interest-title {
-        color: var(--brown, #85715B);
+        color: var(--text-muted);
         font-family: "Mochiy Pop P One";
         font-size: 25px;
         font-style: normal;
@@ -121,7 +124,7 @@ b {
     }
     
     .interest-description {
-        color: #000;
+        color: var(--text-secondary);
         font-family: "Short Stack";
         font-size: 13.5px;
         font-style: normal;
@@ -132,7 +135,7 @@ b {
     }
     
     b {
-        color: #395434;
+        color: var(--text-primary);
         font-weight: bolder;
         font-size: 16px;
     }
