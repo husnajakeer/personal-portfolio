@@ -2,6 +2,7 @@ import './App.css';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from "./components/navbar.js";
 import PageLoader from "./components/page-loader.js";
+import FlowerCursor from "./components/FlowerCursor.js";
 import About from "./sections/about.js";
 import Interests from "./sections/interests.js";
 import Timeline from "./sections/timeline.js";
@@ -12,6 +13,7 @@ import Contact from "./sections/contact.js";
 function App() {
   return (
     <ThemeProvider>
+      <FlowerCursor />
       <PageLoader />
       <Navbar></Navbar>
       <div id="about">
